@@ -5,6 +5,37 @@ let bunnyPage = false;
 let mousePage = false;
 let frogPage = false;
 
+let dogTops = [];
+let dogBottoms = [];
+let dogShoes = [];
+let dogAccessories = [];
+
+let catTops = [];
+let catBottoms = [];
+let catShoes = [];
+let catAccessories = [];
+
+let bunnyTops = [];
+let bunnyBottoms = [];
+let bunnyShoes = [];
+let bunnyAccessories = [];
+
+let mouseTops = [];
+let mouseBottoms = [];
+let mouseShoes = [];
+let mouseAccessories = [];
+
+let frogTops = [];
+let frogBottoms = [];
+let frogShoes = [];
+let frogAccessories = [];
+
+let dogOptions = [];
+let catOptions = [];
+let bunnyOptions = [];
+let mouseOptions = [];
+let frogOptions = [];
+
 function preload() {
 
 }
@@ -33,35 +64,31 @@ function draw() {
   }
 }
 
-function drawDog() {
+function drawDog(x, y, s) {
 
 }
 
-function drawCat() {
+function drawCat(x, y, s) {
 
 }
 
-function drawBunny() {
+function drawBunny(x, y, s) {
 
 }
 
-function drawMouse() {
+function drawMouse(x, y, s) {
 
 }
 
-function drawFrog() {
+function drawFrog(x, y, s) {
 
 }
 
 function drawWelcomePage() {
-
+  
 }
 
 function drawDogPage(){
-
-}
-
-function drawCatPage() {
 
 }
 
