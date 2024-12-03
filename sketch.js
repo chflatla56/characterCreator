@@ -174,82 +174,88 @@ function drawOutfit(animal, x, y) {
 
 function mousePressed() {
   if (welcomePage) {
-    if (/*coords*/) {
-      dogPage = true;
-      welcomePage = false;
-      characterPage = true;
-      savePage = false;
-    } else if (/*coords*/) {
-      catPage = true;
-      welcomePage = false;
-      characterPage = true;
-      savePage = false;
-    } else if (/*coords*/) {
-      bunnyPage = true;
-      welcomePage = false;
-      characterPage = true;
-      savePage = false;
-    } else if (/*coords*/) {
-      mousePage = true;
-      welcomePage = false;
-      charcterPage = true;
-      savePage = false;
-    } else if (/*coords*/){
-      frogPage = true;
-      welcomePage = false;
-      characterPage = true;
-      savePage = false;
+    if (/*coords */) {
+      if (/*coords*/) {
+        dogPage = true;
+        welcomePage = false;
+        characterPage = true;
+        savePage = false;
+      } else if (/*coords*/) {
+        catPage = true;
+        welcomePage = false;
+        characterPage = true;
+        savePage = false;
+      } else if (/*coords*/) {
+        bunnyPage = true;
+        welcomePage = false;
+        characterPage = true;
+        savePage = false;
+      } else if (/*coords*/) {
+        mousePage = true;
+        welcomePage = false;
+        charcterPage = true;
+        savePage = false;
+      } else if (/*coords*/){
+        frogPage = true;
+        welcomePage = false;
+        characterPage = true;
+        savePage = false;
+      }
     }
   }
 
   if (characterPage) {
-    if (/*tops right button */) {
-      if (topCount < 5) {
-         topCount++;
-      } else if (topCount == 5) {
-        topCount = 1;
-      }
-    } else if (/*tops left button */) {
-      if (topCount > 1) {
-        topCount--;
-      } else if (topCount <= 1) {
-        topCount = 5;
-      }
-    } else if (/*bottoms right button */) {
-      if (bottomCount < 11) {
-        bottomCount++;
-      } else if (bottomCount == 11) {
-        bottomCount = 7;
-      }
-    } else if (/*bottoms left button */) { 
-      if (bottomCount > 7) {
-        bottomCount--;
-      } else if (bottomCount <= 7) {
-        bottomCount = 11;
-      }
-    } else if (/*shoe right button */) {
-      if (shoeCount < 17) {
-        shoeCount++;
-      } else if (shoeCount == 17) {
-        shoeCount = 13;
-      }
-    } else if (/*shoe left button */) {
-      if (shoeCount > 13) {
-        shoeCount--;
-      } else if (shoeCount <= 13) {
-        shoeCount = 17;
-      }
-    } else if (/*accessory right button */) {
-      if (accessoryCount < 22) {
-        accessoryCount++;
-      } else if (accessoryCount == 22) {
-        accessoryCount = 19;
-      }
-    } else if (/*accessory left button */) {
-      if (accessoryCount > 19) {
-        accessoryCount--;
-      } else if (accessoryCount <= 19) {
-        accessoryCount = 22;
+    if (/*right x coord */) {
+      if (/*tops right button */) {
+        if (topCount < 5) {
+          topCount++;
+        } else if (topCount == 5) {
+          topCount = 1;
+        }
+      } else if (/*bottoms right button */) {
+        if (bottomCount < 11) {
+          bottomCount++;
+        } else if (bottomCount == 11) {
+          bottomCount = 7;
+        }
+      } else if (/*shoe right button */) {
+        if (shoeCount < 17) {
+          shoeCount++;
+        } else if (shoeCount == 17) {
+          shoeCount = 13;
+        }
+      } else if (/*accessory right button */) {
+        if (accessoryCount < 22) {
+          accessoryCount++;
+        } else if (accessoryCount == 22) {
+          accessoryCount = 19;
+        }
+      } 
+    } else if (/*left x coord */) {
+      if (/*tops left button */) {
+        if (topCount > 1) {
+          topCount--;
+        } else if (topCount <= 1) {
+          topCount = 5;
+        }
+      } else if (/*bottoms left button */) { 
+        if (bottomCount > 7) {
+          bottomCount--;
+        } else if (bottomCount <= 7) {
+          bottomCount = 11;
+        }
+      } else if (/*shoe left button */) {
+        if (shoeCount > 13) {
+          shoeCount--;
+        } else if (shoeCount <= 13) {
+          shoeCount = 17;
+        }
+      } else if (/*accessory left button */) {
+        if (accessoryCount > 19) {
+          accessoryCount--;
+        } else if (accessoryCount <= 19) {
+          accessoryCount = 22;
+        }
       }
     }
    }
