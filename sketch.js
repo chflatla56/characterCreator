@@ -1,4 +1,6 @@
 let welcomePage = true;
+let characterPage = false;
+let savePage = false;
 let dogPage = false;
 let catPage = false;
 let bunnyPage = false;
@@ -73,39 +75,42 @@ function draw() {
 
   if (welcomePage) {
     drawWelcomePage();
-  } else if (dogPage) {
-    drawDogPage();
-  } else if (catPage) {
-    drawCatPage();
-  } else if (bunnyPage) {
-    drawBunnyPage();
-  } else if (mousePage) {
-    drawMousePage();
-  } else if (frogPage) {
-    drawFrogPage();
-  } else {
-    drawWelcomePage();
+  } else if (characterPage) {
+    drawCharacterPage();
+    if (dogPage) {
+      drawDogPage();
+    } else if (catPage) {
+      drawCatPage();
+    } else if (bunnyPage) {
+      drawBunnyPage();
+    } else if (mousePage) {
+      drawMousePage();
+    } else if (frogPage) {
+      drawFrogPage();
+    } else {
+      drawWelcomePage();
+    }
   }
 }
 
 function drawDog(x, y) {
-
+  image(dogBase, x, y);
 }
 
 function drawCat(x, y) {
-
+  image(catBase, x, y);
 }
 
 function drawBunny(x, y) {
-
+  image(bunnyBase, x, y);
 }
 
 function drawMouse(x, y) {
-
+  image(mouseBase, x, y);
 }
 
 function drawFrog(x, y) {
-
+  image(frogBase, x, y);
 }
 
 function drawWelcomePage() {
@@ -144,18 +149,23 @@ function mousePressed() {
     if (/*coords*/) {
       dogPage = true;
       welcomePage = false;
+      characterPage = true;
     } else if (/*coords*/) {
       catPage = true;
       welcomePage = false;
+      characterPage = true;
     } else if (/*coords*/) {
       bunnyPage = true;
       welcomePage = false;
+      characterPage = true;
     } else if (/*coords*/) {
       mousePage = true;
       welcomePage = false;
+      charcterPage = true;
     } else if (/*coords*/){
       frogPage = true;
       welcomePage = false;
+      characterPage = true;
     }
   }
 }
