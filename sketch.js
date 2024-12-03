@@ -27,7 +27,24 @@ function preload() {
   dogOptions[0] = loadImage(/*dog pjs */);
   catOptions[0] = loadImage(/*cat pjs */);
   bunnyOptions[0] = loadImage(/*bunny pjs */);
-  
+  mouseOptions[0] = loadImage(/*mouseOptions */);
+  frogOptions[0] = loadImage(/*frogOptions */);
+
+  for (let i = 1; i <= 5; i++) {
+    dogOptions[i] = loadImage(/*dog tops */);
+    catOptions[i] = loadImage(/*cat tops */);
+    bunnyOptions[i] = loadImage(/*bunny tops*/);
+    mouseOptions[i] = loadImage(/*mouse tops */);
+    frogOptions[i] = loadImage(/*frog tops */);
+  }
+
+  for (let j = 6, j <= 10, j++) {
+    dogOptions[j] = loadImage(/*dog bottoms */);
+    catOptions[j] = loadImage(/*cat bottoms */);
+    bunnyOptions[j] = loadImage(/*bunny bottoms*/);
+    mouseOptions[j] = loadImage(/*mouse bottoms */);
+    frogOptions[j] = loadImage(/*frog bottoms */);
+  }
 }
 
 function setup() {
