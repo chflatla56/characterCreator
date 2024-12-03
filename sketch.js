@@ -5,31 +5,6 @@ let bunnyPage = false;
 let mousePage = false;
 let frogPage = false;
 
-let dogTops = [];
-let dogBottoms = [];
-let dogShoes = [];
-let dogAccessories = [];
-
-let catTops = [];
-let catBottoms = [];
-let catShoes = [];
-let catAccessories = [];
-
-let bunnyTops = [];
-let bunnyBottoms = [];
-let bunnyShoes = [];
-let bunnyAccessories = [];
-
-let mouseTops = [];
-let mouseBottoms = [];
-let mouseShoes = [];
-let mouseAccessories = [];
-
-let frogTops = [];
-let frogBottoms = [];
-let frogShoes = [];
-let frogAccessories = [];
-
 let dogOptions = [];
 let catOptions = [];
 let bunnyOptions = [];
