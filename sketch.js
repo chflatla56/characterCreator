@@ -11,12 +11,28 @@ let bunnyOptions = [];
 let mouseOptions = [];
 let frogOptions = [];
 
-function preload() {
+let dogBase;
+let catBase;
+let bunnyBase;
+let mouseBase;
+let frogBase;
 
+function preload() {
+  dogBase = loadImage(/*file*/);
+  catBase = loadImage(/*file */);
+  bunnyBase = loadImage(/*file*/);
+  mouseBase = loadImage(/*file*/);
+  frogBase = loadImage(/*file*/);
+
+  dogOptions[0] = loadImage(/*dog pjs */);
+  catOptions[0] = loadImage(/*cat pjs */);
+  bunnyOptions[0] = loadImage(/*bunny pjs */);
+  
 }
 
 function setup() {
-  createCanvas(1200, 800);
+  let canvas = createCanvas(1200, 800);
+  canvas.parent("sketch");
 }
 
 function draw() {
@@ -60,25 +76,53 @@ function drawFrog(x, y) {
 }
 
 function drawWelcomePage() {
-  
+  push();
+  scale(0.8);
+  //drawDog(x, y);
+  //drawCat(x, y);
+  //drawBunny(x, y);
+  //drawMouse(x, y);
+  //drawFrog(x, y);
+  pop();
 }
 
 function drawDogPage(){
-
+  //drawDog(x, y);
 }
 
 function drawCatPage() {
-
+  //drawCat(x, y);
 }
 
 function drawBunnyPage() {
-
+  //drawBunny(x, y);
 }
  
 function drawMousePage() {
-  
+  //drawMouse(x, y);
 }
 
 function drawFrogPage() {
+  //drawFrog(x, y);
+}
 
+function mousePressed() {
+  if (welcomePage) {
+    if (/*coords*/) {
+      dogPage = true;
+      welcomePage = false;
+    } else if (/*coords*/) {
+      catPage = true;
+      welcomePage = false;
+    } else if (/*coords*/) {
+      bunnyPage = true;
+      welcomePage = false;
+    } else if (/*coords*/) {
+      mousePage = true;
+      welcomePage = false;
+    } else if (/*coords*/){
+      frogPage = true;
+      welcomePage = false;
+    }
+  }
 }
