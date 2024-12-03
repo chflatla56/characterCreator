@@ -41,7 +41,7 @@ function preload() {
 }
 
 function setup() {
-  createCanvas(1000, 600);
+  createCanvas(1200, 800);
 }
 
 function draw() {
@@ -64,23 +64,23 @@ function draw() {
   }
 }
 
-function drawDog(x, y, s) {
+function drawDog(x, y) {
 
 }
 
-function drawCat(x, y, s) {
+function drawCat(x, y) {
 
 }
 
-function drawBunny(x, y, s) {
+function drawBunny(x, y) {
 
 }
 
-function drawMouse(x, y, s) {
+function drawMouse(x, y) {
 
 }
 
-function drawFrog(x, y, s) {
+function drawFrog(x, y) {
 
 }
 
