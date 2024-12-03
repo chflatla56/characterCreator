@@ -38,12 +38,28 @@ function preload() {
     frogOptions[i] = loadImage(/*frog tops */);
   }
 
-  for (let j = 6, j <= 10, j++) {
+  for (let j = 6; j <= 10; j++) {
     dogOptions[j] = loadImage(/*dog bottoms */);
     catOptions[j] = loadImage(/*cat bottoms */);
     bunnyOptions[j] = loadImage(/*bunny bottoms*/);
     mouseOptions[j] = loadImage(/*mouse bottoms */);
     frogOptions[j] = loadImage(/*frog bottoms */);
+  }
+
+  for (let k = 11; k <= 15; k++) {
+    dogOptions[k] = loadImage(/*dog shoes */);
+    catOptions[k] = loadImage(/*cat shoes */);
+    bunnyOptions[k] = loadImage(/*bunny shoes*/);
+    mouseOptions[k] = loadImage(/*mouse shoes */);
+    frogOptions[k] = loadImage(/*frog shoes */);
+  }
+
+  for (let p = 16; p <= 18; p++) {
+    dogOptions[p] = loadImage(/*dog accessories */);
+    catOptions[p] = loadImage(/*cat accessories */);
+    bunnyOptions[p] = loadImage(/*bunny accessories*/);
+    mouseOptions[p] = loadImage(/*mouse accessories */);
+    frogOptions[p] = loadImage(/*frog accessories */);
   }
 }
 
