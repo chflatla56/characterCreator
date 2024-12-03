@@ -19,10 +19,10 @@ let bunnyBase;
 let mouseBase;
 let frogBase;
 
-let topCount = 1;
+let topCount = 0;
 let bottomCount = 6;
-let shoeCount = 11;
-let accessoryCount = 16;
+let shoeCount = 12;
+let accessoryCount = 18;
 
 function preload() {
   dogBase = loadImage(/*file*/);
@@ -31,13 +31,9 @@ function preload() {
   mouseBase = loadImage(/*file*/);
   frogBase = loadImage(/*file*/);
 
-  dogOptions[0] = loadImage(/*dog pjs */);
-  catOptions[0] = loadImage(/*cat pjs */);
-  bunnyOptions[0] = loadImage(/*bunny pjs */);
-  mouseOptions[0] = loadImage(/*mouseOptions */);
-  frogOptions[0] = loadImage(/*frogOptions */);
+  //0, 6, 12, and 18 are the pjs
 
-  for (let i = 1; i <= 5; i++) {
+  for (let i = 0; i <= 5; i++) {
     dogOptions[i] = loadImage(/*dog tops */);
     catOptions[i] = loadImage(/*cat tops */);
     bunnyOptions[i] = loadImage(/*bunny tops*/);
@@ -45,7 +41,7 @@ function preload() {
     frogOptions[i] = loadImage(/*frog tops */);
   }
 
-  for (let j = 6; j <= 10; j++) {
+  for (let j = 6; j <= 11; j++) {
     dogOptions[j] = loadImage(/*dog bottoms */);
     catOptions[j] = loadImage(/*cat bottoms */);
     bunnyOptions[j] = loadImage(/*bunny bottoms*/);
@@ -53,7 +49,7 @@ function preload() {
     frogOptions[j] = loadImage(/*frog bottoms */);
   }
 
-  for (let k = 11; k <= 15; k++) {
+  for (let k = 12; k <= 17; k++) {
     dogOptions[k] = loadImage(/*dog shoes */);
     catOptions[k] = loadImage(/*cat shoes */);
     bunnyOptions[k] = loadImage(/*bunny shoes*/);
@@ -61,7 +57,7 @@ function preload() {
     frogOptions[k] = loadImage(/*frog shoes */);
   }
 
-  for (let p = 16; p <= 19; p++) {
+  for (let p = 18; p <= 22; p++) {
     dogOptions[p] = loadImage(/*dog accessories */);
     catOptions[p] = loadImage(/*cat accessories */);
     bunnyOptions[p] = loadImage(/*bunny accessories*/);
@@ -121,42 +117,58 @@ function drawFrog(x, y) {
 function drawWelcomePage() {
   push();
   scale(0.8);
-  //drawDog(x, y);
-  //drawCat(x, y);
-  //drawBunny(x, y);
-  //drawMouse(x, y);
-  //drawFrog(x, y);
+  drawDog(x, y);
+  drawCat(x, y);
+  drawBunny(x, y);
+  drawMouse(x, y);
+  drawFrog(x, y);
   pop();
 }
 
 function drawDogPage(){
-  //drawDog(x, y);
+  drawDog(x, y);
+  drawOutfit(dogOptions, x, y);
 }
 
 function drawCatPage() {
-  //drawCat(x, y);
+  drawCat(x, y);
+  drawOutfit(catOptions, x, y);
 }
 
 function drawBunnyPage() {
-  //drawBunny(x, y);
+  drawBunny(x, y);
+  drawOutfit(bunnyOptions, x, y);
 }
  
 function drawMousePage() {
-  //drawMouse(x, y);
+  drawMouse(x, y);
+  drawOutfit(mouseOptions, x, y);
 }
 
 function drawFrogPage() {
-  //drawFrog(x, y);
+  drawFrog(x, y);
+  drawOutfit(frogOptions, x, y);
 }
 
 function drawOutfit(animal, x, y) {
+  let array = animal;
   if (welcomePage) {
-    image('animal'Tops[topsCount], x, y);
-    image('animal'Bottoms[bottomsCount], x, y);
-    image('animal'Shoes[shoeCount], x, y);
-    image('animal'Accessories[accessoryCount], x, y);
+    //i'm afraid it will infinitely generate numbers
+    //how to fix? so they only run once, even when
+    //called in draw func?
+    let rand1 = int(random(1, 6));
+    let rand2 = int(random(7, 12));
+    let rand3 = int(random(13, 18));
+    let rand4 = int(random(19, 23));
+    image(array[rand1], x, y);
+    image(array[rand2], x, y);
+    image(array[rand3], x, y);
+    image(array[rand4], x, y);
   } else if (characterPage) {
-    
+    image(array[topCount], x, y);
+    image(array[bottomCount], x, y);
+    image(array[shoeCount], x, y);
+    image(array[accessoryCount], x, y);
   }
 }
 
@@ -200,44 +212,44 @@ function mousePressed() {
     } else if (/*tops left button */) {
       if (topCount > 1) {
         topCount--;
-      } else if (topCount == 1) {
+      } else if (topCount <= 1) {
         topCount = 5;
       }
     } else if (/*bottoms right button */) {
-      if (bottomCount < 10) {
+      if (bottomCount < 11) {
         bottomCount++;
-      } else if (bottomCount == 10) {
-        bottomCount = 6;
+      } else if (bottomCount == 11) {
+        bottomCount = 7;
       }
     } else if (/*bottoms left button */) { 
-      if (bottomCount > 6) {
+      if (bottomCount > 7) {
         bottomCount--;
-      } else if (bottomCount == 6) {
-        bottomCount = 10;
+      } else if (bottomCount <= 7) {
+        bottomCount = 11;
       }
     } else if (/*shoe right button */) {
-      if (shoeCount < 15) {
+      if (shoeCount < 17) {
         shoeCount++;
-      } else if (shoeCount == 15) {
-        shoeCount = 11;
+      } else if (shoeCount == 17) {
+        shoeCount = 13;
       }
     } else if (/*shoe left button */) {
-      if (shoeCount > 11) {
+      if (shoeCount > 13) {
         shoeCount--;
-      } else if (shoeCount == 11) {
-        shoeCount = 15;
+      } else if (shoeCount <= 13) {
+        shoeCount = 17;
       }
     } else if (/*accessory right button */) {
-      if (accessoryCount < 19) {
+      if (accessoryCount < 22) {
         accessoryCount++;
-      } else if (accessoryCount == 19) {
-        accessoryCount = 16;
+      } else if (accessoryCount == 22) {
+        accessoryCount = 19;
       }
     } else if (/*accessory left button */) {
-      if (accessoryCount > 16) {
+      if (accessoryCount > 19) {
         accessoryCount--;
-      } else if (accessoryCount == 16) {
-        accessoryCount = 19;
+      } else if (accessoryCount <= 19) {
+        accessoryCount = 22;
       }
     }
    }
