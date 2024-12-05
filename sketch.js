@@ -110,9 +110,11 @@ function draw() {
       drawMousePage();
     } else if (frogPage) {
       drawFrogPage();
-    } else {
-      drawWelcomePage();
     }
+  } else if (savePage) {
+    //drawSavePage();
+  } else {
+    drawWelcomePage();
   }
 }
 
@@ -149,7 +151,7 @@ function drawWelcomePage() {
 
 function drawDogPage(){
   drawDog(225, 0);
-  drawButtons();
+  drawPage();
   drawOutfit(dogOptions, 225, 0);
 }
 
@@ -216,6 +218,7 @@ function speechBubble() {
   fill(0);
   rect(725, 280, 50, 25);
 
+  fill(250);
   text("ok!", 725, 305);
 }
 
@@ -260,7 +263,7 @@ function mousePressed() {
   
   }
 
-  if (characterPage) {
+  if (characterPage && click) {
     if (mouseX >= 300 && mouseX <= 350) {
       if (mouseY >= 150 && mouseY <= 180) {
         if (topCount < 5) {
@@ -333,6 +336,7 @@ function mousePressed() {
           bunnyPage = false;
           mousePage = false;
           frogPage = false;
+          click = false;
         } else if (mouseX >= 1025 && mouseX <= 1175) {
           welcomePage = false;
           savePage = true;
