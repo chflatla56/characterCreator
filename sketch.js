@@ -142,28 +142,33 @@ function drawWelcomePage() {
 }
 
 function drawDogPage(){
-  drawDog(200, 0);
-  //drawOutfit(dogOptions, 400, 0);
+  drawDog(225, 0);
+  drawButtons();
+  drawOutfit(dogOptions, 400, 0);
 }
 
 function drawCatPage() {
-  drawCat(200, 0);
-  //drawOutfit(catOptions, 400, 0);
+  drawCat(225, 0);
+  drawButtons();
+  drawOutfit(catOptions, 225, 0);
 }
 
 function drawBunnyPage() {
-  drawBunny(200, 50);
-  //drawOutfit(bunnyOptions, 400, 0);
+  drawBunny(225, 50);
+  drawButtons();
+  drawOutfit(bunnyOptions, 225, 0);
 }
  
 function drawMousePage() {
-  drawMouse(200, 0);
-  //drawOutfit(mouseOptions, 400, 0);
+  drawMouse(225, 0);
+  drawButtons();
+  drawOutfit(mouseOptions, 225, 0);
 }
 
 function drawFrogPage() {
-  drawFrog(200, 0);
-  //drawOutfit(frogOptions, 400, 0);
+  drawFrog(225, 0);
+  drawButtons();
+  drawOutfit(frogOptions, 225, 0);
 }
 
 function drawOutfit(animal, x, y) {
@@ -179,6 +184,22 @@ function drawOutfit(animal, x, y) {
     image(array[shoeCount], x, y);
     image(array[accessoryCount], x, y);
   }
+}
+
+function drawButtons() {
+  textSize(30);
+  for (let r = 0; r < 600; r = r + 150) {
+    fill(255);
+    rect(300, 150 + r, 50, 30);
+    rect(850, 150 + r, 50, 30);
+    fill(150);
+    text("<~", 310, 176 + r);
+    text("~>", 860, 176 + r);
+  }
+
+  fill(255);
+  rect(25, 675, 150, 80);
+  rect(1025, 675, 150, 80);
 }
 
 function mousePressed() {
@@ -214,54 +235,53 @@ function mousePressed() {
   
   }
 
-  /*
   if (characterPage) {
-    if (/*right x coord ) {
-      if (/*tops right button ) {
+    if (mouseX >= 300 && mouseX <= 350) {
+      if (mouseY >= 150 && mouseY <= 180) {
         if (topCount < 5) {
           topCount++;
         } else if (topCount == 5) {
           topCount = 1;
         }
-      } else if (/*bottoms right button ) {
+      } else if (mouseY >= 300 && mouseY <= 330) {
         if (bottomCount < 11) {
           bottomCount++;
         } else if (bottomCount == 11) {
           bottomCount = 7;
         }
-      } else if (/*shoe right button/) {
+      } else if (mouseY >= 450 && mouseY <= 480) {
         if (shoeCount < 17) {
           shoeCount++;
         } else if (shoeCount == 17) {
           shoeCount = 13;
         }
-      } else if (/*accessory right button ) {
+      } else if (mouseY >= 600 && mouseY <= 630) {
         if (accessoryCount < 22) {
           accessoryCount++;
         } else if (accessoryCount == 22) {
           accessoryCount = 19;
         }
       } 
-    } else if (/*left x coord ) {
-      if (/*tops left button) {
+    } else if (mouseX >= 800 && mouseX <= 850) {
+      if (mouseY >= 150 && mouseY <= 180) {
         if (topCount > 1) {
           topCount--;
         } else if (topCount <= 1) {
           topCount = 5;
         }
-      } else if (/*bottoms left button) { 
+      } else if (mouseY >= 300 && mouseY <= 330) { 
         if (bottomCount > 7) {
           bottomCount--;
         } else if (bottomCount <= 7) {
           bottomCount = 11;
         }
-      } else if (/*shoe left button ) {
+      } else if (mouseY >= 450 && mouseY <= 480) {
         if (shoeCount > 13) {
           shoeCount--;
         } else if (shoeCount <= 13) {
           shoeCount = 17;
         }
-      } else if (/*accessory left button ) {
+      } else if (mouseY >= 600 && mouseY <= 630) {
         if (accessoryCount > 19) {
           accessoryCount--;
         } else if (accessoryCount <= 19) {
@@ -269,5 +289,5 @@ function mousePressed() {
         }
       }
     }
-   } */
+   }
 }
