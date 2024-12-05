@@ -35,35 +35,35 @@ function preload() {
 
   /*
   for (let i = 0; i <= 5; i++) {
-    dogOptions[i] = loadImage(/*dog tops );
-    catOptions[i] = loadImage(/*cat tops );
-    bunnyOptions[i] = loadImage(/*bunny tops);
-    mouseOptions[i] = loadImage(/*mouse tops );
-    frogOptions[i] = loadImage(/*frog tops );
+    dogOptions[i] = loadImage("./dog" + i + ".PNG");
+    catOptions[i] = loadImage("./cat" + i + ".PNG");
+    bunnyOptions[i] = loadImage("./bunny" + i + ".PNG");
+    mouseOptions[i] = loadImage("./mouse" + i + ".PNG");
+    frogOptions[i] = loadImage("./frog" + i + ".PNG");
   }
 
   for (let j = 6; j <= 11; j++) {
-    dogOptions[j] = loadImage(/*dog bottoms );
-    catOptions[j] = loadImage(/*cat bottoms );
-    bunnyOptions[j] = loadImage(/*bunny bottoms);
-    mouseOptions[j] = loadImage(/*mouse bottoms );
-    frogOptions[j] = loadImage(/*frog bottoms );
+    dogOptions[j] = loadImage("./dog" + j + ".PNG");
+    catOptions[j] = loadImage("./cat" + j + ".PNG");
+    bunnyOptions[j] = loadImage("./bunny" + j + ".PNG");
+    mouseOptions[j] = loadImage("./mouse" + j + ".PNG");
+    frogOptions[j] = loadImage("./frog" + j + ".PNG");
   }
 
   for (let k = 12; k <= 17; k++) {
-    dogOptions[k] = loadImage(/*dog shoes );
-    catOptions[k] = loadImage(/*cat shoes );
-    bunnyOptions[k] = loadImage(/*bunny shoes);
-    mouseOptions[k] = loadImage(/*mouse shoes );
-    frogOptions[k] = loadImage(/*frog shoes );
+    dogOptions[k] = loadImage("./dog" + k + ".PNG");
+    catOptions[k] = loadImage("./cat" + k + ".PNG");
+    bunnyOptions[k] = loadImage("./bunny" + k + ".PNG");
+    mouseOptions[k] = loadImage("./mouse" + k + ".PNG");
+    frogOptions[k] = loadImage("./frog" + k + ".PNG");
   }
 
   for (let p = 18; p <= 22; p++) {
-    dogOptions[p] = loadImage(/*dog accessories );
-    catOptions[p] = loadImage(/*cat accessories );
-    bunnyOptions[p] = loadImage(/*bunny accessories);
-    mouseOptions[p] = loadImage(/*mouse accessories );
-    frogOptions[p] = loadImage(/*frog accessories );
+    dogOptions[p] = loadImage("./dog" + p + ".PNG");
+    catOptions[p] = loadImage("./cat" + p + ".PNG");
+    bunnyOptions[p] = loadImage("./bunny" + p + ".PNG");
+    mouseOptions[p] = loadImage("./mouse" + p + ".PNG");
+    frogOptions[p] = loadImage("./frog" + p + ".PNG");
   }
   */
 }
@@ -75,6 +75,10 @@ function setup() {
 
 function draw() {
   background(0);
+
+  fill(255);
+  textSize(50);
+  text("five nights at fredder's", 100, 100);
 
   if (welcomePage) {
     drawWelcomePage();
@@ -97,33 +101,33 @@ function draw() {
 }
 
 function drawDog(x, y) {
-  image(dogBase, x, y);
+  image(dogBase, x, y, 750, 750);
 }
 
 function drawCat(x, y) {
-  image(catBase, x, y);
+  image(catBase, x, y, 750, 750);
 }
 
 function drawBunny(x, y) {
-  image(bunnyBase, x, y);
+  image(bunnyBase, x, y, 750, 750);
 }
 
 function drawMouse(x, y) {
-  image(mouseBase, x, y);
+  image(mouseBase, x, y, 750, 750);
 }
 
 function drawFrog(x, y) {
-  image(frogBase, x, y);
+  image(frogBase, x, y, 750, 750);
 }
 
 function drawWelcomePage() {
   push();
   scale(0.8);
-  drawDog(0, 0);
-  drawCat(100, 0);
-  drawBunny(200, 0);
-  drawMouse(300, 0);
-  drawFrog(400, 0);
+  drawDog(-225, 200);
+  drawCat(75, 200);
+  drawBunny(375, 200);
+  drawMouse(675, 200);
+  drawFrog(975, 200);
   pop();
 }
 
