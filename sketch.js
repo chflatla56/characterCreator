@@ -200,7 +200,7 @@ function mousePressed() {
       } else if (mouseX >= 727 && mouseX <= 947) {
         mousePage = true;
         welcomePage = false;
-        charcterPage = true;
+        characterPage = true;
         savePage = false;
       } else if (mouseX >= 965 && mouseX <= 1192){
         frogPage = true;
