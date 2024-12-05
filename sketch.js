@@ -33,37 +33,39 @@ function preload() {
 
   //0, 6, 12, and 18 are the pjs
 
+  /*
   for (let i = 0; i <= 5; i++) {
-    dogOptions[i] = loadImage(/*dog tops */);
-    catOptions[i] = loadImage(/*cat tops */);
-    bunnyOptions[i] = loadImage(/*bunny tops*/);
-    mouseOptions[i] = loadImage(/*mouse tops */);
-    frogOptions[i] = loadImage(/*frog tops */);
+    dogOptions[i] = loadImage(/*dog tops );
+    catOptions[i] = loadImage(/*cat tops );
+    bunnyOptions[i] = loadImage(/*bunny tops);
+    mouseOptions[i] = loadImage(/*mouse tops );
+    frogOptions[i] = loadImage(/*frog tops );
   }
 
   for (let j = 6; j <= 11; j++) {
-    dogOptions[j] = loadImage(/*dog bottoms */);
-    catOptions[j] = loadImage(/*cat bottoms */);
-    bunnyOptions[j] = loadImage(/*bunny bottoms*/);
-    mouseOptions[j] = loadImage(/*mouse bottoms */);
-    frogOptions[j] = loadImage(/*frog bottoms */);
+    dogOptions[j] = loadImage(/*dog bottoms );
+    catOptions[j] = loadImage(/*cat bottoms );
+    bunnyOptions[j] = loadImage(/*bunny bottoms);
+    mouseOptions[j] = loadImage(/*mouse bottoms );
+    frogOptions[j] = loadImage(/*frog bottoms );
   }
 
   for (let k = 12; k <= 17; k++) {
-    dogOptions[k] = loadImage(/*dog shoes */);
-    catOptions[k] = loadImage(/*cat shoes */);
-    bunnyOptions[k] = loadImage(/*bunny shoes*/);
-    mouseOptions[k] = loadImage(/*mouse shoes */);
-    frogOptions[k] = loadImage(/*frog shoes */);
+    dogOptions[k] = loadImage(/*dog shoes );
+    catOptions[k] = loadImage(/*cat shoes );
+    bunnyOptions[k] = loadImage(/*bunny shoes);
+    mouseOptions[k] = loadImage(/*mouse shoes );
+    frogOptions[k] = loadImage(/*frog shoes );
   }
 
   for (let p = 18; p <= 22; p++) {
-    dogOptions[p] = loadImage(/*dog accessories */);
-    catOptions[p] = loadImage(/*cat accessories */);
-    bunnyOptions[p] = loadImage(/*bunny accessories*/);
-    mouseOptions[p] = loadImage(/*mouse accessories */);
-    frogOptions[p] = loadImage(/*frog accessories */);
+    dogOptions[p] = loadImage(/*dog accessories );
+    catOptions[p] = loadImage(/*cat accessories );
+    bunnyOptions[p] = loadImage(/*bunny accessories);
+    mouseOptions[p] = loadImage(/*mouse accessories );
+    frogOptions[p] = loadImage(/*frog accessories );
   }
+  */
 }
 
 function setup() {
