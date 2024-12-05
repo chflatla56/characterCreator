@@ -29,6 +29,8 @@ let rand2;
 let rand3;
 let rand4;
 
+let click = false;
+
 function preload() {
   dogBase = loadImage("./animals/dog.PNG");
   catBase = loadImage("./animals/cat.PNG");
@@ -38,9 +40,9 @@ function preload() {
 
   //0, 6, 12, and 18 are the pjs
 
-  dogOptions[0] = loadImage("./animals/dog0.PNG");
-  dogOptions[6] = loadImage("./animals/dog6.PNG");
-  dogOptions[12] = loadImage("./animals/dog12.PNG");
+  dogOptions[0] = loadImage("./dog0.PNG");
+  dogOptions[6] = loadImage("./dog6.PNG");
+  dogOptions[12] = loadImage("./dog12.PNG");
   
   /*
   for (let i = 0; i <= 5; i++) {
@@ -148,44 +150,44 @@ function drawWelcomePage() {
 function drawDogPage(){
   drawDog(225, 0);
   drawButtons();
-  drawOutfit(dogOptions, 400, 0);
+  drawOutfit(dogOptions, 225, 0);
 }
 
 function drawCatPage() {
   drawCat(225, 0);
-  drawButtons();
+  drawPage();
   drawOutfit(catOptions, 225, 0);
 }
 
 function drawBunnyPage() {
   drawBunny(225, 50);
-  drawButtons();
+  drawPage();
   drawOutfit(bunnyOptions, 225, 0);
 }
  
 function drawMousePage() {
   drawMouse(225, 0);
-  drawButtons();
+  drawPage();
   drawOutfit(mouseOptions, 225, 0);
 }
 
 function drawFrogPage() {
   drawFrog(225, 0);
-  drawButtons();
+  drawPage();
   drawOutfit(frogOptions, 225, 0);
 }
 
 function drawOutfit(arr, x, y) {
   if (welcomePage) {
-    image(arr[rand1], x, y);
-    image(arr[rand2], x, y);
-    image(arr[rand3], x, y);
-    image(arr[rand4], x, y);
+    image(arr[rand1], x, y, 750, 750);
+    image(arr[rand2], x, y, 750, 750);
+    image(arr[rand3], x, y, 750, 750);
+    image(arr[rand4], x, y, 750, 750);
   } else if (characterPage) {
-    image(arr[topCount], x, y);
-    image(arr[bottomCount], x, y);
-    image(arr[shoeCount], x, y);
-    image(arr[accessoryCount], x, y);
+    image(arr[shoeCount], x, y, 750, 750);
+    image(arr[topCount], x, y, 750, 750);
+    image(arr[bottomCount], x, y, 750, 750);
+    image(arr[accessoryCount], x, y, 750, 750);
   }
 }
 
@@ -203,6 +205,26 @@ function drawButtons() {
   fill(255);
   rect(25, 675, 150, 80);
   rect(1025, 675, 150, 80);
+}
+
+function speechBubble() {
+  textSize(25);
+  fill(255);
+  rect(700, 200, 100, 125);
+  triangle(725, 325, 750, 325, 725, 350);
+
+  fill(0);
+  rect(725, 280, 50, 25);
+
+  text("ok!", 725, 305);
+}
+
+function drawPage() {
+  if (click) {
+    drawButtons();
+  } else {
+    speechBubble();
+  }
 }
 
 function mousePressed() {
@@ -292,5 +314,30 @@ function mousePressed() {
         }
       }
     }
+   }
+
+   if (characterPage) {
+      if (mouseX >= 725 && mouseX <= 775 && mouseY >= 280 && mouseY <= 305) {
+        click = true;
+      }
+   }
+
+   if(characterPage) {
+      if (mouseY >= 675 && mouseY <= 755) {
+        if(mouseX >= 25 && mouseX <= 175) {
+          welcomePage = true;
+          savePage = false;
+          characterPage = false;
+          dogPage = false;
+          catPage = false;
+          bunnyPage = false;
+          mousePage = false;
+          frogPage = false;
+        } else if (mouseX >= 1025 && mouseX <= 1175) {
+          welcomePage = false;
+          savePage = true;
+          characterPage = false;
+        }
+      }
    }
 }
