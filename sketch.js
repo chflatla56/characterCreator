@@ -24,6 +24,11 @@ let bottomCount = 6;
 let shoeCount = 12;
 let accessoryCount = 18;
 
+let rand1;
+let rand2;
+let rand3;
+let rand4;
+
 function preload() {
   dogBase = loadImage("./animals/dog.PNG");
   catBase = loadImage("./animals/cat.PNG");
@@ -71,6 +76,11 @@ function preload() {
 function setup() {
   let canvas = createCanvas(1200, 800);
   canvas.parent("sketch");
+
+  rand1 = int(random(1, 6));
+  rand2 = int(random(7, 12));
+  rand3 = int(random(13, 18));
+  rand4 = int(random(19, 23));
 }
 
 function draw() {
@@ -159,13 +169,6 @@ function drawFrogPage() {
 function drawOutfit(animal, x, y) {
   let array = animal;
   if (welcomePage) {
-    //i'm afraid it will infinitely generate numbers
-    //how to fix? so they only run once, even when
-    //called in draw func?
-    let rand1 = int(random(1, 6));
-    let rand2 = int(random(7, 12));
-    let rand3 = int(random(13, 18));
-    let rand4 = int(random(19, 23));
     image(array[rand1], x, y);
     image(array[rand2], x, y);
     image(array[rand3], x, y);
@@ -179,7 +182,6 @@ function drawOutfit(animal, x, y) {
 }
 
 function mousePressed() {
-  
   if (welcomePage) {
     if (mouseY >= 235 && mouseY <= 690) {
       if (mouseX >= 10 && mouseX <= 230) {
