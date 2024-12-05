@@ -192,17 +192,17 @@ function mousePressed() {
         welcomePage = false;
         characterPage = true;
         savePage = false;
-      } else if (mouseX >= 480 && mouseX <= 690) {
+      } else if (mouseX >= 490 && mouseX <= 705) {
         bunnyPage = true;
         welcomePage = false;
         characterPage = true;
         savePage = false;
-      } else if (mouseX >= 710 && mouseX <= 920) {
+      } else if (mouseX >= 727 && mouseX <= 947) {
         mousePage = true;
         welcomePage = false;
         charcterPage = true;
         savePage = false;
-      } else if (mouseX >= 930 && mouseX <=){
+      } else if (mouseX >= 965 && mouseX <= 1192){
         frogPage = true;
         welcomePage = false;
         characterPage = true;
