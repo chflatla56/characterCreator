@@ -175,18 +175,17 @@ function drawFrogPage() {
   drawOutfit(frogOptions, 225, 0);
 }
 
-function drawOutfit(animal, x, y) {
-  let array = animal;
+function drawOutfit(arr, x, y) {
   if (welcomePage) {
-    image(array[rand1], x, y);
-    image(array[rand2], x, y);
-    image(array[rand3], x, y);
-    image(array[rand4], x, y);
+    image(arr[rand1], x, y);
+    image(arr[rand2], x, y);
+    image(arr[rand3], x, y);
+    image(arr[rand4], x, y);
   } else if (characterPage) {
-    image(array[topCount], x, y);
-    image(array[bottomCount], x, y);
-    image(array[shoeCount], x, y);
-    image(array[accessoryCount], x, y);
+    image(arr[topCount], x, y);
+    image(arr[bottomCount], x, y);
+    image(arr[shoeCount], x, y);
+    image(arr[accessoryCount], x, y);
   }
 }
 
