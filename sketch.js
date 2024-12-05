@@ -38,6 +38,10 @@ function preload() {
 
   //0, 6, 12, and 18 are the pjs
 
+  dogOptions[0] = loadImage("./animals/dog0.PNG");
+  dogOptions[6] = loadImage("./animals/dog6.PNG");
+  dogOptions[12] = loadImage("./animals/dog12.PNG");
+  
   /*
   for (let i = 0; i <= 5; i++) {
     dogOptions[i] = loadImage("./dog" + i + ".PNG");
