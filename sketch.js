@@ -76,14 +76,14 @@ function setup() {
 function draw() {
   background(0);
 
-  fill(255);
-  textSize(50);
-  text("five nights at fredder's", 100, 100);
-
   if (welcomePage) {
     drawWelcomePage();
+
+    fill(255);
+    textSize(50);
+    text("five nights at fredder's", 100, 100);
+
   } else if (characterPage) {
-    drawCharacterPage();
     if (dogPage) {
       drawDogPage();
     } else if (catPage) {
@@ -132,28 +132,28 @@ function drawWelcomePage() {
 }
 
 function drawDogPage(){
-  drawDog(400, 0);
-  drawOutfit(dogOptions, 400, 0);
+  drawDog(200, 0);
+  //drawOutfit(dogOptions, 400, 0);
 }
 
 function drawCatPage() {
-  drawCat(400, 0);
-  drawOutfit(catOptions, 400, 0);
+  drawCat(200, 0);
+  //drawOutfit(catOptions, 400, 0);
 }
 
 function drawBunnyPage() {
-  drawBunny(x, y);
-  drawOutfit(bunnyOptions, 400, 0);
+  drawBunny(200, 50);
+  //drawOutfit(bunnyOptions, 400, 0);
 }
  
 function drawMousePage() {
-  drawMouse(x, y);
-  drawOutfit(mouseOptions, 400, 0);
+  drawMouse(200, 0);
+  //drawOutfit(mouseOptions, 400, 0);
 }
 
 function drawFrogPage() {
-  drawFrog(x, y);
-  drawOutfit(frogOptions, 400, 0);
+  drawFrog(200, 0);
+  //drawOutfit(frogOptions, 400, 0);
 }
 
 function drawOutfit(animal, x, y) {
@@ -179,30 +179,30 @@ function drawOutfit(animal, x, y) {
 }
 
 function mousePressed() {
-  /*
+  
   if (welcomePage) {
-    if (/*coords ) {
-      if (/*coords) {
+    if (mouseY >= 235 && mouseY <= 690) {
+      if (mouseX >= 10 && mouseX <= 230) {
         dogPage = true;
         welcomePage = false;
         characterPage = true;
         savePage = false;
-      } else if (/*coords) {
+      } else if (mouseX >= 250 && mouseX <= 460) {
         catPage = true;
         welcomePage = false;
         characterPage = true;
         savePage = false;
-      } else if (/*coords) {
+      } else if (mouseX >= 480 && mouseX <= 690) {
         bunnyPage = true;
         welcomePage = false;
         characterPage = true;
         savePage = false;
-      } else if (/*coords) {
+      } else if (mouseX >= 710 && mouseX <= 920) {
         mousePage = true;
         welcomePage = false;
         charcterPage = true;
         savePage = false;
-      } else if (/*coords){
+      } else if (mouseX >= 930 && mouseX <=){
         frogPage = true;
         welcomePage = false;
         characterPage = true;
