@@ -189,7 +189,7 @@ function drawOutfit(arr, x, y) {
     image(arr[shoeCount], x, y, 750, 750);
     image(arr[topCount], x, y, 750, 750);
     image(arr[bottomCount], x, y, 750, 750);
-    image(arr[accessoryCount], x, y, 750, 750);
+    //image(arr[accessoryCount], x, y, 750, 750);
   }
 }
 
@@ -217,6 +217,8 @@ function speechBubble() {
 
   fill(0);
   rect(725, 280, 50, 25);
+
+  text("help", 725, 250);
 
   fill(250);
   text("ok!", 725, 305);
@@ -319,8 +321,8 @@ function mousePressed() {
     }
    }
 
-   if (characterPage) {
-      if (mouseX >= 725 && mouseX <= 775 && mouseY >= 280 && mouseY <= 305) {
+   if (characterPage && !click) {
+      if (mouseX >= 700 && mouseX <= 800 && mouseY >= 200 && mouseY <= 150) {
         click = true;
       }
    }
