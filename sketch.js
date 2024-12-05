@@ -111,6 +111,7 @@ function draw() {
     } else if (frogPage) {
       drawFrogPage();
     }
+    drawPage();
   } else if (savePage) {
     //drawSavePage();
   } else {
@@ -151,31 +152,26 @@ function drawWelcomePage() {
 
 function drawDogPage(){
   drawDog(225, 0);
-  drawPage();
   drawOutfit(dogOptions, 225, 0);
 }
 
 function drawCatPage() {
   drawCat(225, 0);
-  drawPage();
   drawOutfit(catOptions, 225, 0);
 }
 
 function drawBunnyPage() {
   drawBunny(225, 50);
-  drawPage();
   drawOutfit(bunnyOptions, 225, 0);
 }
  
 function drawMousePage() {
   drawMouse(225, 0);
-  drawPage();
   drawOutfit(mouseOptions, 225, 0);
 }
 
 function drawFrogPage() {
   drawFrog(225, 0);
-  drawPage();
   drawOutfit(frogOptions, 225, 0);
 }
 
@@ -319,31 +315,31 @@ function mousePressed() {
         }
       }
     }
-   }
+  }
 
-   if (characterPage && !click) {
-      if (mouseX >= 700 && mouseX <= 800 && mouseY >= 200 && mouseY <= 150) {
-        click = true;
-      }
-   }
+  if (characterPage && !click) {
+    if (mouseX >= 700 && mouseX <= 800 && mouseY >= 200 && mouseY <= 350) {
+       click = true;
+    }
+  }
 
-   if(characterPage) {
-      if (mouseY >= 675 && mouseY <= 755) {
-        if(mouseX >= 25 && mouseX <= 175) {
-          welcomePage = true;
-          savePage = false;
-          characterPage = false;
-          dogPage = false;
-          catPage = false;
-          bunnyPage = false;
-          mousePage = false;
-          frogPage = false;
-          click = false;
-        } else if (mouseX >= 1025 && mouseX <= 1175) {
-          welcomePage = false;
-          savePage = true;
-          characterPage = false;
-        }
+  if(characterPage) {
+    if (mouseY >= 675 && mouseY <= 755) {
+      if(mouseX >= 25 && mouseX <= 175) {
+        welcomePage = true;
+         savePage = false;
+         characterPage = false;
+         dogPage = false;
+         catPage = false;
+         bunnyPage = false;
+         mousePage = false;
+         frogPage = false;
+         click = false;
+      } else if (mouseX >= 1025 && mouseX <= 1175) {
+         welcomePage = false;
+         savePage = true;
+         characterPage = false;
       }
-   }
+    }
+  }
 }
