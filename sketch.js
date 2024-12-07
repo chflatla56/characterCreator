@@ -46,7 +46,7 @@ function preload() {
   
   
   for (let i = 0; i <= 5; i++) {
-    dogOptions[i] = loadImage("./dog outfits./tops/dog" + i + ".PNG");
+    dogOptions[i] = loadImage("./dog outfits/tops/dog" + i + ".PNG");
     //catOptions[i] = loadImage("./cat" + i + ".PNG");
     //bunnyOptions[i] = loadImage("./bunny" + i + ".PNG");
     mouseOptions[i] = loadImage("./mouse outfits/tops/mouse" + i + ".PNG");
@@ -70,7 +70,7 @@ function preload() {
   }
 
   for (let p = 18; p <= 21; p++) {
-    dogOptions[p] = loadImage("./dog/outfits/dog" + p + ".PNG");
+    dogOptions[p] = loadImage("./dog outfits/accessories/dog" + p + ".PNG");
     //catOptions[p] = loadImage("./cat" + p + ".PNG");
     //bunnyOptions[p] = loadImage("./bunny" + p + ".PNG");
     mouseOptions[p] = loadImage("./mouse outfits/accessories/mouse" + p + ".PNG");
@@ -258,10 +258,12 @@ function drawSavePage() {
   fill(255);
   rect(25, 675, 150, 80, 70);
   rect(1025, 675, 150, 80, 70);
+  rect(200, 675, 150, 80, 70);
 
   fill(0);
   text("home", 65, 730);
   text("save", 1070, 725);
+  text("back", 245, 730);
 }
 
 function mousePressed() {
@@ -381,6 +383,13 @@ function mousePressed() {
       characterPage = false;
     } else if (savePage) {
       saveCanvas('myCharacter.jpg');
+    }
+  } 
+
+  if (savePage) {
+    if (mouseX >= 200 && mouseX <= 350 && mouseY >= 675 && mouseY <= 755){
+      characterPage = true;
+      savePage = false;
     }
   }
 }
