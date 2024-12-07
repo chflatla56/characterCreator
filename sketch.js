@@ -46,7 +46,7 @@ function preload() {
   
   
   for (let i = 0; i <= 5; i++) {
-    //dogOptions[i] = loadImage("./dog" + i + ".PNG");
+    dogOptions[i] = loadImage("./dog outfits./tops/dog" + i + ".PNG");
     //catOptions[i] = loadImage("./cat" + i + ".PNG");
     //bunnyOptions[i] = loadImage("./bunny" + i + ".PNG");
     mouseOptions[i] = loadImage("./mouse outfits/tops/mouse" + i + ".PNG");
@@ -54,7 +54,7 @@ function preload() {
   }
 
   for (let j = 6; j <= 11; j++) {
-    //dogOptions[j] = loadImage("./dog" + j + ".PNG");
+    dogOptions[j] = loadImage("./dog outfits/bottoms/dog" + j + ".PNG");
     //catOptions[j] = loadImage("./cat" + j + ".PNG");
     //bunnyOptions[j] = loadImage("./bunny" + j + ".PNG");
     mouseOptions[j] = loadImage("./mouse outfits/bottoms/mouse" + j + ".PNG");
@@ -62,7 +62,7 @@ function preload() {
   }
 
   for (let k = 12; k <= 17; k++) {
-    //dogOptions[k] = loadImage("./dog" + k + ".PNG");
+    dogOptions[k] = loadImage("./dog outfits/shoes/dog" + k + ".PNG");
     //catOptions[k] = loadImage("./cat" + k + ".PNG");
     //bunnyOptions[k] = loadImage("./bunny" + k + ".PNG");
     mouseOptions[k] = loadImage("./mouse outfits/shoes/mouse" + k + ".PNG");
@@ -70,7 +70,7 @@ function preload() {
   }
 
   for (let p = 18; p <= 21; p++) {
-    //dogOptions[p] = loadImage("./dog" + p + ".PNG");
+    dogOptions[p] = loadImage("./dog/outfits/dog" + p + ".PNG");
     //catOptions[p] = loadImage("./cat" + p + ".PNG");
     //bunnyOptions[p] = loadImage("./bunny" + p + ".PNG");
     mouseOptions[p] = loadImage("./mouse outfits/accessories/mouse" + p + ".PNG");
