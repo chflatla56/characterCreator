@@ -305,7 +305,7 @@ function mousePressed() {
         if (accessoryCount < 21) {
           accessoryCount++;
         } else if (accessoryCount == 21) {
-          accessoryCount = 19;
+          accessoryCount = 18;
         }
       } else if (mouseY >= 300 && mouseY <= 330) {
         if (topCount < 5) {
@@ -330,7 +330,7 @@ function mousePressed() {
       if (mouseY >= 150 && mouseY <= 180) {
         if (accessoryCount > 18) {
           accessoryCount--;
-        } else if (accessoryCount <= 19) {
+        } else if (accessoryCount <= 18) {
           accessoryCount = 21;
         }
       } else if (mouseY >= 300 && mouseY <= 330) { 
