@@ -30,11 +30,13 @@ let rand3;
 let rand4;
 
 let hennyPenny;
+let buttonClick;
 
 let click = false;
 
 function preload() {
   hennyPenny = loadFont("./HennyPenny-Regular.ttf");
+  buttonClick = loadSound("./buttonClick.wav");
 
   dogBase = loadImage("./animals/dog.PNG");
   catBase = loadImage("./animals/cat.PNG");
@@ -307,24 +309,28 @@ function mousePressed() {
         } else if (accessoryCount == 21) {
           accessoryCount = 18;
         }
+        buttonClick.play();
       } else if (mouseY >= 300 && mouseY <= 330) {
         if (topCount < 5) {
           topCount++;
         } else if (topCount == 5) {
           topCount = 1;
         }
+        buttonClick.play();
       } else if (mouseY >= 450 && mouseY <= 480) {
         if (bottomCount < 11) {
           bottomCount++;
         } else if (bottomCount == 11) {
           bottomCount = 7;
         }
+        buttonClick.play();
       } else if (mouseY >= 600 && mouseY <= 630) {
         if (shoeCount < 17) {
           shoeCount++;
         } else if (shoeCount == 17) {
           shoeCount = 13;
         }
+        buttonClick.play();
       } 
     } else if (mouseX >= 300 && mouseX <= 350) {
       if (mouseY >= 150 && mouseY <= 180) {
@@ -333,24 +339,28 @@ function mousePressed() {
         } else if (accessoryCount <= 18) {
           accessoryCount = 21;
         }
+        buttonClick.play();
       } else if (mouseY >= 300 && mouseY <= 330) { 
         if (topCount > 1) {
           topCount--;
         } else if (topCount <= 1) {
           topCount = 5;
         }
+        buttonClick.play();
       } else if (mouseY >= 450 && mouseY <= 480) {
         if (bottomCount > 7) {
           bottomCount--;
         } else if (bottomCount <= 7) {
           bottomCount = 11;
         }
+        buttonClick.play();
       } else if (mouseY >= 600 && mouseY <= 630) {
         if (shoeCount > 13) {
           shoeCount--;
         } else if (shoeCount <= 13) {
           shoeCount = 17;
         } 
+        buttonClick.play();
       }
     }
   }
