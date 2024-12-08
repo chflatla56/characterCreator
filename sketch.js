@@ -276,26 +276,31 @@ function mousePressed() {
         welcomePage = false;
         characterPage = true;
         savePage = false;
+        buttonClick.play();
       } else if (mouseX >= 250 && mouseX <= 460) {
         catPage = true;
         welcomePage = false;
         characterPage = true;
         savePage = false;
+        buttonClick.play();
       } else if (mouseX >= 490 && mouseX <= 705) {
         bunnyPage = true;
         welcomePage = false;
         characterPage = true;
         savePage = false;
+        buttonClick.play();
       } else if (mouseX >= 727 && mouseX <= 947) {
         mousePage = true;
         welcomePage = false;
         characterPage = true;
         savePage = false;
+        buttonClick.play();
       } else if (mouseX >= 965 && mouseX <= 1192){
         frogPage = true;
         welcomePage = false;
         characterPage = true;
         savePage = false;
+        buttonClick.play();
       }
     } 
   
@@ -368,21 +373,22 @@ function mousePressed() {
   if (characterPage && !click) {
     if (mouseX >= 765 && mouseX <= 840 && mouseY >= 250 && mouseY <= 290) {
        click = true;
+       buttonClick.play();
     }
   }
 
   if(characterPage || savePage) {
     if (mouseY >= 675 && mouseY <= 755 && mouseX >= 25 && mouseX <= 175) {
         welcomePage = true;
-         savePage = false;
-         characterPage = false;
-         dogPage = false;
-         catPage = false;
-         bunnyPage = false;
-         mousePage = false;
-         frogPage = false;
-         click = false;
-    
+        savePage = false;
+        characterPage = false;
+        dogPage = false;
+        catPage = false;
+        bunnyPage = false;
+        mousePage = false;
+        frogPage = false;
+        click = false;
+        buttonClick.play();
     }
   }
 
@@ -391,8 +397,10 @@ function mousePressed() {
       welcomePage = false;
       savePage = true;
       characterPage = false;
+      buttonClick.play();
     } else if (savePage) {
       saveCanvas('myCharacter.jpg');
+      buttonClick.play();
     }
   } 
 
@@ -400,6 +408,7 @@ function mousePressed() {
     if (mouseX >= 200 && mouseX <= 350 && mouseY >= 675 && mouseY <= 755){
       characterPage = true;
       savePage = false;
+      buttonClick.play();
     }
   }
 }
