@@ -35,6 +35,7 @@ let bratzMagicHair;
 let flashCassanova;
 
 let click = false;
+let info = false;
 
 function preload() {
   hennyPenny = loadFont("./HennyPenny-Regular.ttf");
@@ -260,6 +261,24 @@ function speechBubble() {
 function drawPage() {
   if (click) {
     drawButtons();
+
+    fill(255);
+    rect(25, 45, 150, 80, 70);
+
+    fill(0);
+    textSize(30);
+    text("info", 75, 100);
+
+    if (info) {
+      fill(255);
+      rect(400, 50, 400, 700, 90);
+
+      fill(0);
+      circle(730, 100, 50);
+
+      fill(255);
+      text("X", 720, 110);
+    } 
   } else {
     speechBubble();
   }
@@ -397,6 +416,14 @@ function mousePressed() {
         } 
         buttonClick.play();
       }
+    }
+
+    if (mouseX >= 25 && mouseX <= 175 && mouseY >= 45 && mouseY <= 125 && !info) {
+      info = true;
+    } 
+
+    if (mouseX >= 705 && mouseX <= 755 && mouseY <= 75 && mouseY <= 125 && info) {
+      info = false;
     }
   }
 
