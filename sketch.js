@@ -13,6 +13,11 @@ let bunnyOptions = [];
 let mouseOptions = [];
 let frogOptions = [];
 
+let weather1 = ["Sunny", "Clear", "Stormy", "Dark", "Rainy"];
+let weather2 = ["cold", "cool", "fair", "warm", "hot"];
+let info1 = 0;
+let info2 = 0;
+
 let dogBase;
 let catBase;
 let bunnyBase;
@@ -275,9 +280,23 @@ function drawPage() {
 
       fill(0);
       circle(730, 100, 50);
+      text("Type:", 450, 150);
+      if (dogPage) {
+        text("Dog!", 450, 200);
+      } else if (catPage) {
+        text("Cat!", 450, 200);
+      } else if (bunnyPage) {
+        text("Bunny!", 450, 200);
+      } else if (mousePage) {
+        text("Mouse!", 450, 200);
+      } else if (frogPage) {
+        text("Frog!", 450, 200);
+      }
+      text("Today's Weather:", 450, 270);
+      text("" + weather1[info1] + " and " + weather2[info2] + "!", 450, 320);
 
       fill(255);
-      text("X", 720, 110);
+      text("X", 715, 110);
     } 
   } else {
     speechBubble();
@@ -420,9 +439,11 @@ function mousePressed() {
 
     if (mouseX >= 25 && mouseX <= 175 && mouseY >= 45 && mouseY <= 125 && !info) {
       info = true;
+      info1 = int(random(weather1.length));
+      info2 = int(random(weather2.length));
     } 
 
-    if (mouseX >= 705 && mouseX <= 755 && mouseY <= 75 && mouseY <= 125 && info) {
+    if (mouseX >= 705 && mouseX <= 755 && mouseY >= 75 && mouseY <= 125 && info) {
       info = false;
     }
   }
