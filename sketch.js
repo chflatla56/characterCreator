@@ -94,9 +94,6 @@ function setup() {
   rand3 = int(random(13, 18));
   rand4 = int(random(19, 23));
 
-  if (!flashCassanova.isPlaying()) {
-    flashCassanova.play();
-  }
 }
 
 function draw() {
@@ -112,6 +109,11 @@ function draw() {
     textSize(40);
     text("select a character to start!", 375, 760);
 
+    if (!flashCassanova.isPlaying()) {
+      flashCassanova.play();
+      bratzMagicHair.stop();
+    }
+
   } else if (characterPage) {
     if (dogPage) {
       drawDogPage();
@@ -125,8 +127,18 @@ function draw() {
       drawFrogPage();
     }
     drawPage();
+
+    if (!flashCassanova.isPlaying()) {
+      flashCassanova.play();
+      bratzMagicHair.stop();
+    }
   } else if (savePage) {
     drawSavePage();
+
+    if (!bratzMagicHair.isPlaying()) {
+      flashCassanova.stop();
+      bratzMagicHair.play();
+    }
   } else {
     drawWelcomePage();
   }
