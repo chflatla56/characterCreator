@@ -288,6 +288,14 @@ function drawSavePage() {
   text("home", 65, 730);
   text("save", 1070, 725);
   text("back", 245, 730);
+
+  textSize(30);
+  fill(255);
+  rect(700, 100, 200, 200, 90);
+
+  fill(0);
+  text("Thanks for", 725, 190);
+  text("your help!", 730, 240);
 }
 
 function mousePressed() {
