@@ -31,12 +31,16 @@ let rand4;
 
 let hennyPenny;
 let buttonClick;
+let bratzMagicHair;
+let flashCassanova;
 
 let click = false;
 
 function preload() {
   hennyPenny = loadFont("./HennyPenny-Regular.ttf");
   buttonClick = loadSound("./buttonClick.wav");
+  bratzMagicHair = loadSound("./bratzMagicHair.mp3");
+  flashCassanova = loadSound("./flashCassanova.mp3");
 
   dogBase = loadImage("./animals/dog.PNG");
   catBase = loadImage("./animals/cat.PNG");
@@ -89,6 +93,10 @@ function setup() {
   rand2 = int(random(7, 12));
   rand3 = int(random(13, 18));
   rand4 = int(random(19, 23));
+
+  if (!flashCassanova.isPlaying()) {
+    flashCassanova.play();
+  }
 }
 
 function draw() {
@@ -389,6 +397,10 @@ function mousePressed() {
         frogPage = false;
         click = false;
         buttonClick.play();
+        if (!flashCassanova.isPlaying()) {
+          flashCassanova.play();
+          bratzMagicHair.stop();
+        }
     }
   }
 
@@ -398,6 +410,8 @@ function mousePressed() {
       savePage = true;
       characterPage = false;
       buttonClick.play();
+      flashCassanova.stop();
+      bratzMagicHair.play();
     } else if (savePage) {
       saveCanvas('myCharacter.jpg');
       buttonClick.play();
@@ -405,10 +419,16 @@ function mousePressed() {
   } 
 
   if (savePage) {
+    flashCassanova.stop();
+    bratzMagicHair.play();
     if (mouseX >= 200 && mouseX <= 350 && mouseY >= 675 && mouseY <= 755){
       characterPage = true;
       savePage = false;
       buttonClick.play();
+
+      bratzMagicHair.stop();
+      flashCassanova.play();
+
     }
   }
 }
