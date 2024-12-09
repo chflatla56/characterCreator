@@ -56,7 +56,7 @@ function preload() {
     //catOptions[i] = loadImage("./cat" + i + ".PNG");
     //bunnyOptions[i] = loadImage("./bunny" + i + ".PNG");
     mouseOptions[i] = loadImage("./mouse outfits/tops/mouse" + i + ".PNG");
-    //frogOptions[i] = loadImage("./frog" + i + ".PNG");
+    frogOptions[i] = loadImage("./frog outfits/tops/frog" + i + ".PNG");
   }
 
   for (let j = 6; j <= 11; j++) {
@@ -64,7 +64,7 @@ function preload() {
     //catOptions[j] = loadImage("./cat" + j + ".PNG");
     //bunnyOptions[j] = loadImage("./bunny" + j + ".PNG");
     mouseOptions[j] = loadImage("./mouse outfits/bottoms/mouse" + j + ".PNG");
-    //frogOptions[j] = loadImage("./frog" + j + ".PNG");
+    frogOptions[j] = loadImage("./frog outfits/bottoms/frog" + j + ".PNG");
   }
 
   for (let k = 12; k <= 17; k++) {
@@ -72,7 +72,7 @@ function preload() {
     //catOptions[k] = loadImage("./cat" + k + ".PNG");
     //bunnyOptions[k] = loadImage("./bunny" + k + ".PNG");
     mouseOptions[k] = loadImage("./mouse outfits/shoes/mouse" + k + ".PNG");
-    //frogOptions[k] = loadImage("./frog" + k + ".PNG");
+    frogOptions[k] = loadImage("./frog outfits/shoes/frog" + k + ".PNG");
   }
 
   for (let p = 18; p <= 21; p++) {
@@ -80,7 +80,7 @@ function preload() {
     //catOptions[p] = loadImage("./cat" + p + ".PNG");
     //bunnyOptions[p] = loadImage("./bunny" + p + ".PNG");
     mouseOptions[p] = loadImage("./mouse outfits/accessories/mouse" + p + ".PNG");
-    //frogOptions[p] = loadImage("./frog" + p + ".PNG");
+    frogOptions[p] = loadImage("./frog outfits/accessories/frog" + p + ".PNG");
   }
   
 }
@@ -93,6 +93,8 @@ function setup() {
   rand2 = int(random(7, 12));
   rand3 = int(random(13, 18));
   rand4 = int(random(19, 23));
+
+  flashCassanova.play();
 
 }
 
