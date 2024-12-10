@@ -15,8 +15,8 @@ let frogOptions = [];
 
 let weather1 = ["Sunny", "Clear", "Stormy", "Dark", "Rainy"];
 let weather2 = ["cold", "cool", "fair", "warm", "hot"];
-let info1 = 0;
-let info2 = 0;
+let info1;
+let info2;
 
 let dogBase;
 let catBase;
@@ -101,6 +101,8 @@ function setup() {
   rand4 = int(random(19, 23));
 
   flashCassanova.play();
+  info1 = int(random(weather1.length));
+  info2 = int(random(weather2.length));
 
 }
 
@@ -280,20 +282,53 @@ function drawPage() {
 
       fill(0);
       circle(730, 100, 50);
-      text("Type:", 450, 150);
+      text("Major:", 450, 175);
+      text("Zodiac Sign:", 450, 385);
+      text("Favorite Color:", 450, 490);
+      text("Favorite Food:", 450, 595);
       if (dogPage) {
-        text("Dog!", 450, 200);
+        textSize(40);
+        text("Dog!", 525, 125);
+        textSize(30);
+        text("Business!", 450, 225);
+        text("Aries!", 450, 435);
+        text("Baby Blue!", 450, 540);
+        text("", 450, 645);
       } else if (catPage) {
-        text("Cat!", 450, 200);
+        textSize(40);
+        text("Cat!", 525, 125);
+        textSize(30);
+        text("Literature!", 450, 225);
+        text("Gemini!", 450, 435);
+        text("Burgundy!", 450, 540);
+        text("", 450, 645);
       } else if (bunnyPage) {
-        text("Bunny!", 450, 200);
+        textSize(40);
+        text("Bunny!", 510, 125);
+        textSize(30);
+        text("Architecture!", 450, 225);
+        text("Cancer!", 450, 435);
+        text("Brown!", 450, 540);
+        text("", 450, 645);
       } else if (mousePage) {
-        text("Mouse!", 450, 200);
+        textSize(40);
+        text("Mouse!", 510, 125);
+        textSize(30);
+        text("Film!", 450, 225);
+        text("Aquarius!", 450, 435);
+        text("Pink!", 450, 540);
+        text("", 450, 645);
       } else if (frogPage) {
-        text("Frog!", 450, 200);
+        textSize(40);
+        text("Frog!", 515, 125);
+        textSize(30);
+        text("Environmental Science!", 450, 225);
+        text("Pisces!", 450, 435);
+        text("Green!", 450, 540);
+        text("", 450, 645);
       }
-      text("Today's Weather:", 450, 270);
-      text("" + weather1[info1] + " and " + weather2[info2] + "!", 450, 320);
+      text("Today's Weather:", 450, 280);
+      text("" + weather1[info1] + " and " + weather2[info2] + "!", 450, 330);
 
       fill(255);
       text("X", 715, 110);
@@ -439,8 +474,7 @@ function mousePressed() {
 
     if (mouseX >= 25 && mouseX <= 175 && mouseY >= 45 && mouseY <= 125 && !info) {
       info = true;
-      info1 = int(random(weather1.length));
-      info2 = int(random(weather2.length));
+      
     } 
 
     if (mouseX >= 705 && mouseX <= 755 && mouseY >= 75 && mouseY <= 125 && info) {
@@ -471,6 +505,9 @@ function mousePressed() {
           flashCassanova.play();
           bratzMagicHair.stop();
         }
+
+        info1 = int(random(weather1.length));
+        info2 = int(random(weather2.length));
     }
   }
 
