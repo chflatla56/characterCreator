@@ -119,7 +119,7 @@ function draw() {
     textSize(40);
     text("select a character to start!", 375, 760);
 
-    if (!flashCassanova.isPlaying()) {
+    if (!flashCassanova.isPlaying() && sound) {
       flashCassanova.play();
       bratzMagicHair.stop();
     }
@@ -138,14 +138,14 @@ function draw() {
     }
     drawPage();
 
-    if (!flashCassanova.isPlaying()) {
+    if (!flashCassanova.isPlaying() && sound) {
       flashCassanova.play();
       bratzMagicHair.stop();
     }
   } else if (savePage) {
     drawSavePage();
 
-    if (!bratzMagicHair.isPlaying()) {
+    if (!bratzMagicHair.isPlaying() && sound) {
       flashCassanova.stop();
       bratzMagicHair.play();
     }
@@ -159,6 +159,8 @@ function draw() {
     //speaker
   } else {
     //crossed out speaker
+    flashCassanova.stop();
+    bratzMagicHair.stop();
   }
 }
 
@@ -309,7 +311,7 @@ function drawPage() {
         text("Literature!", 450, 230);
         text("Gemini!", 450, 430);
         text("Burgundy!", 450, 540);
-        text("", 450, 645);
+        text("Sushi!", 450, 645);
       } else if (bunnyPage) {
         textSize(40);
         text("Bunny!", 510, 125);
@@ -482,11 +484,12 @@ function mousePressed() {
 
     if (mouseX >= 25 && mouseX <= 175 && mouseY >= 45 && mouseY <= 125 && !info) {
       info = true;
-      
+      buttonClick.play();
     } 
 
     if (mouseX >= 705 && mouseX <= 755 && mouseY >= 75 && mouseY <= 125 && info) {
       info = false;
+      buttonClick.play();
     }
   }
 
@@ -550,8 +553,10 @@ function mousePressed() {
   if (mouseX >= 1100 && mouseX <= 1150 && mouseY >= 50 && mouseY <= 100){
     if (sound) {
       sound = false;
+      buttonClick.play();
     } else {
       sound = true;
+      buttonClick.play();
     }
   }
 }
