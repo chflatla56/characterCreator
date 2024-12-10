@@ -41,6 +41,7 @@ let flashCassanova;
 
 let click = false;
 let info = false;
+let sound = true;
 
 function preload() {
   hennyPenny = loadFont("./HennyPenny-Regular.ttf");
@@ -55,7 +56,6 @@ function preload() {
   frogBase = loadImage("./animals/frog.PNG");
 
   //0, 6, 12, and 18 are the pjs
-  
   
   for (let i = 0; i <= 5; i++) {
     dogOptions[i] = loadImage("./dog outfits/tops/dog" + i + ".PNG");
@@ -151,6 +151,14 @@ function draw() {
     }
   } else {
     drawWelcomePage();
+  }
+
+  textSize(30);
+  fill(0);
+  if (sound) {
+    //speaker
+  } else {
+    //crossed out speaker
   }
 }
 
@@ -282,31 +290,31 @@ function drawPage() {
 
       fill(0);
       circle(730, 100, 50);
-      text("Major:", 450, 175);
-      text("Zodiac Sign:", 450, 385);
+      text("Major:", 450, 180);
+      text("Zodiac Sign:", 450, 380);
       text("Favorite Color:", 450, 490);
       text("Favorite Food:", 450, 595);
       if (dogPage) {
         textSize(40);
         text("Dog!", 525, 125);
         textSize(30);
-        text("Business!", 450, 225);
-        text("Aries!", 450, 435);
+        text("Business!", 450, 230);
+        text("Aries!", 450, 430);
         text("Baby Blue!", 450, 540);
         text("T-bone steak!", 450, 645);
       } else if (catPage) {
         textSize(40);
         text("Cat!", 525, 125);
         textSize(30);
-        text("Literature!", 450, 225);
-        text("Gemini!", 450, 435);
+        text("Literature!", 450, 230);
+        text("Gemini!", 450, 430);
         text("Burgundy!", 450, 540);
         text("", 450, 645);
       } else if (bunnyPage) {
         textSize(40);
         text("Bunny!", 510, 125);
         textSize(30);
-        text("Architecture!", 450, 225);
+        text("Architecture!", 450, 230);
         text("Cancer!", 450, 435);
         text("Brown!", 450, 540);
         text("Carrot Cake!", 450, 645);
@@ -314,7 +322,7 @@ function drawPage() {
         textSize(40);
         text("Mouse!", 510, 125);
         textSize(30);
-        text("Film!", 450, 225);
+        text("Film!", 450, 230);
         text("Aquarius!", 450, 435);
         text("Pink!", 450, 540);
         text("Mac n' Cheese!", 450, 645);
@@ -322,13 +330,13 @@ function drawPage() {
         textSize(40);
         text("Frog!", 515, 125);
         textSize(30);
-        text("Environmental Science!", 450, 225);
+        text("Environmental Science!", 450, 230);
         text("Pisces!", 450, 435);
         text("Green!", 450, 540);
         text("Flies! (lol)", 450, 645);
       }
-      text("Today's Weather:", 450, 280);
-      text("" + weather1[info1] + " and " + weather2[info2] + "!", 450, 330);
+      text("Today's Weather:", 450, 300);
+      text("" + weather1[info1] + " and " + weather2[info2] + "!", 450, 350);
 
       fill(255);
       text("X", 715, 110);
@@ -536,6 +544,14 @@ function mousePressed() {
       bratzMagicHair.stop();
       flashCassanova.play();
 
+    }
+  }
+
+  if (mouseX >= 1100 && mouseX <= 1150 && mouseY >= 50 && mouseY <= 100){
+    if (sound) {
+      sound = false;
+    } else {
+      sound = true;
     }
   }
 }
