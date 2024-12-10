@@ -293,7 +293,7 @@ function drawPage() {
         text("Business!", 450, 225);
         text("Aries!", 450, 435);
         text("Baby Blue!", 450, 540);
-        text("", 450, 645);
+        text("T-bone steak!", 450, 645);
       } else if (catPage) {
         textSize(40);
         text("Cat!", 525, 125);
@@ -309,7 +309,7 @@ function drawPage() {
         text("Architecture!", 450, 225);
         text("Cancer!", 450, 435);
         text("Brown!", 450, 540);
-        text("", 450, 645);
+        text("Carrot Cake!", 450, 645);
       } else if (mousePage) {
         textSize(40);
         text("Mouse!", 510, 125);
@@ -317,7 +317,7 @@ function drawPage() {
         text("Film!", 450, 225);
         text("Aquarius!", 450, 435);
         text("Pink!", 450, 540);
-        text("", 450, 645);
+        text("Mac n' Cheese!", 450, 645);
       } else if (frogPage) {
         textSize(40);
         text("Frog!", 515, 125);
@@ -325,7 +325,7 @@ function drawPage() {
         text("Environmental Science!", 450, 225);
         text("Pisces!", 450, 435);
         text("Green!", 450, 540);
-        text("", 450, 645);
+        text("Flies! (lol)", 450, 645);
       }
       text("Today's Weather:", 450, 280);
       text("" + weather1[info1] + " and " + weather2[info2] + "!", 450, 330);
