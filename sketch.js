@@ -43,6 +43,9 @@ let click = false;
 let info = false;
 let sound = true;
 
+let speaker1;
+let speaker2;
+
 function preload() {
   hennyPenny = loadFont("./HennyPenny-Regular.ttf");
   buttonClick = loadSound("./buttonClick.wav");
@@ -293,49 +296,49 @@ function drawPage() {
       fill(0);
       circle(730, 100, 50);
       text("Major:", 450, 180);
-      text("Zodiac Sign:", 450, 380);
-      text("Favorite Color:", 450, 490);
-      text("Favorite Food:", 450, 595);
+      text("Zodiac Sign:", 450, 420);
+      text("Favorite Color:", 450, 530);
+      text("Favorite Food:", 450, 640);
       if (dogPage) {
         textSize(40);
-        text("Dog!", 525, 125);
+        text("Dog!", 550, 125);
         textSize(30);
         text("Business!", 450, 230);
-        text("Aries!", 450, 430);
-        text("Baby Blue!", 450, 540);
-        text("T-bone steak!", 450, 645);
+        text("Aries!", 450, 470);
+        text("Baby Blue!", 450, 580);
+        text("T-bone steak!", 450, 690);
       } else if (catPage) {
         textSize(40);
-        text("Cat!", 525, 125);
+        text("Cat!", 550, 125);
         textSize(30);
         text("Literature!", 450, 230);
-        text("Gemini!", 450, 430);
-        text("Burgundy!", 450, 540);
-        text("Sushi!", 450, 645);
+        text("Gemini!", 450, 470);
+        text("Burgundy!", 450, 580);
+        text("Sushi!", 450, 690);
       } else if (bunnyPage) {
         textSize(40);
-        text("Bunny!", 510, 125);
+        text("Bunny!", 520, 125);
         textSize(30);
         text("Architecture!", 450, 230);
-        text("Cancer!", 450, 435);
-        text("Brown!", 450, 540);
-        text("Carrot Cake!", 450, 645);
+        text("Cancer!", 450, 470);
+        text("Brown!", 450, 580);
+        text("Carrot Cake!", 450, 690);
       } else if (mousePage) {
         textSize(40);
-        text("Mouse!", 510, 125);
+        text("Mouse!", 520, 125);
         textSize(30);
         text("Film!", 450, 230);
-        text("Aquarius!", 450, 435);
-        text("Pink!", 450, 540);
-        text("Mac n' Cheese!", 450, 645);
+        text("Aquarius!", 450, 470);
+        text("Pink!", 450, 580);
+        text("Mac n' Cheese!", 450, 690);
       } else if (frogPage) {
         textSize(40);
-        text("Frog!", 515, 125);
+        text("Frog!", 545, 125);
         textSize(30);
         text("Environmental Science!", 450, 230);
-        text("Pisces!", 450, 435);
-        text("Green!", 450, 540);
-        text("Flies! (lol)", 450, 645);
+        text("Pisces!", 450, 470);
+        text("Green!", 450, 580);
+        text("Flies! (lol)", 450, 690);
       }
       text("Today's Weather:", 450, 300);
       text("" + weather1[info1] + " and " + weather2[info2] + "!", 450, 350);
